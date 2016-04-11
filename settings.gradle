@@ -1,0 +1,10 @@
+rootProject.name = 'arq.couchbase.vertx.mdl.gradle'
+include ':front'
+include ':platform'
+include ':persistence'
+include ':server'
+
+project(':front').projectDir = "$rootDir/front" as File
+project(':platform').projectDir = "$rootDir/platform" as File
+project(':persistence').projectDir = "$rootDir/persistence" as File
+project(':server').projectDir = "$rootDir/server" as File

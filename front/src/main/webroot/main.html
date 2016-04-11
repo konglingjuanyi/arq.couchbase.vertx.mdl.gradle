@@ -1,0 +1,92 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<title>Importador Discogs</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		
+		<link rel="stylesheet" href="node_modules/material-design-lite/material.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">	
+		<script src="node_modules/material-design-lite/material.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		
+		
+		<script>
+			function loadPage(pagePath) {
+		        $('#content').load(pagePath);		
+		        		
+			}
+			
+			function hideMenu() {
+		        var layout = document.querySelector('.mdl-layout');
+				layout.MaterialLayout.toggleDrawer();			
+			}
+			
+			$(document).ready(function() {				
+				    
+				 $("#option1").click(function(event){
+     				event.preventDefault();
+					loadPage('app/option1.html');
+				 }); 	
+				 
+				 $("#option2").click(function(event){
+			        event.preventDefault();
+			        loadPage('app/option2.html');			  
+				 }); 
+				 
+				 $("#option3").click(function(event){				 
+			        event.preventDefault();
+			        loadPage('app/option3.html');			       
+				 }); 
+				 
+				 $("#option4").click(function(event){				 
+			 		event.preventDefault();
+			        loadPage('app/option4.html');			        
+				 }); 				 				 				 			    
+				   				 
+			});		
+		
+		</script>
+		
+	</head>
+	<body>		
+		<!-- The drawer is always open in large screens. The header is always shown, even in small screens. -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+		            mdl-layout--fixed-header">
+		  <header class="mdl-layout__header">
+		    <div class="mdl-layout__header-row">
+		      <span class="mdl-layout-title">Importador Discogs</span>
+		      <div class="mdl-layout-spacer"></div>
+		    </div>
+		  </header>
+		  <div class="mdl-layout__drawer">
+		    <span class="mdl-layout-title">Opciones</span>
+		    <nav class="mdl-navigation">
+		      <a class="mdl-navigation__link" id="option1" href="#">Discografía</a>
+		      <a class="mdl-navigation__link" id="option2" href="#">Opción 2</a>
+		      <a class="mdl-navigation__link" id="option3" href="#">Opción 3</a>
+		      <a class="mdl-navigation__link" id="option4" href="#">Opción 4</a>
+		    </nav>
+		  </div>
+		  <main class="mdl-layout__content">
+	    	<div class="mdl-grid">
+	    		<div class="mdl-cell mdl-cell--1-col">
+			      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+			        <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+			          <i class="material-icons">search</i>
+			        </label>
+			        <div class="mdl-textfield__expandable-holder">
+			          <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+			        </div>
+			      </div>    		
+	    		</div>
+	    	</div>		  
+		    <div id="content" class="page-content">
+		    
+		    </div>
+		  </main>
+	  
+		</div>		
+
+	</body>
+</html>
