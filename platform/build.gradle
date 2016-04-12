@@ -1,4 +1,3 @@
-
 description = 'Vert.x REST module'
 dependencies {
     compile group: 'io.vertx', name: 'vertx-web', version:'3.2.1'
@@ -8,8 +7,18 @@ dependencies {
 }
 
 task fatJar(type: Jar) {
+
 	println 'Building jar with dependencies -fat jar-'
+	
     baseName = project.name + '-all'
-    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    from { 
+    	configurations.compile.collect { 
+    		it.isDirectory() ? it : zipTree(it) 
+    	} 
+    }
     with jar
+    
+	manifest {
+	    attributes 'Main-Class': 'es.arq.platform.webserver.ServerInstance'
+	}    
 }
