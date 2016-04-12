@@ -1,8 +1,15 @@
 
-description = ''
+description = 'Vert.x REST module'
 dependencies {
     compile group: 'io.vertx', name: 'vertx-web', version:'3.2.1'
     compile group: 'log4j', name: 'log4j', version:'1.2.17'
   compile project(':persistence')
   compile project(':front')
+}
+
+task fatJar(type: Jar) {
+	println 'Building jar with dependencies -fat jar-'
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
 }

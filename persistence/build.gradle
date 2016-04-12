@@ -1,5 +1,5 @@
 
-description = ''
+description = 'Persistence module ready to use with Couchbase'
 dependencies {
     compile group: 'com.couchbase.client', name: 'java-client', version:'2.2.3'
     compile group: 'log4j', name: 'log4j', version:'1.2.17'
