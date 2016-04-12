@@ -1,1 +1,11 @@
 description = 'Web front Module based in Material Design Lite'
+
+sourceSets {
+    main {
+		resources {
+		      srcDirs = ['src/main']
+		      include 'webroot/**'
+		      exclude 'assembly/**'
+		}
+    }
+}
