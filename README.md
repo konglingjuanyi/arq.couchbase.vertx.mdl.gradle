@@ -1,5 +1,9 @@
 Arquitectura básica basada en MDL, Couchbase y Vert.x 
 
+-Para descargar las dependencias de Node, desde el módulo front/src/main/webroot ejecutar:
+
+	npm install
+
 -Para hacer el "build" del proyecto es necesario Gradle >= 2.12, desde la raiz ejecutar:
 
 	gradle build
