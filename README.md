@@ -1,10 +1,10 @@
 Arquitectura básica basada en MDL, Couchbase y Vert.x 
 
-- Para hacer el "build" del proyecto es necesario Gradle >= 2.12, desde la raiz ejecutar:
+-Para hacer el "build" del proyecto es necesario Gradle >= 2.12, desde la raiz ejecutar:
 
 	gradle build
 	
-- Para generar jar con dependencias ejecutar la tarea:
+-Para generar jar con dependencias ejecutar la tarea:
 
 	gradle build fatJar	
 
